@@ -1,0 +1,23 @@
+.rocket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.rocket img {
+    width: 150px;
+    margin-top: 30%;
+    animation: fly 5s 0.5s ease-in;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+
+}
