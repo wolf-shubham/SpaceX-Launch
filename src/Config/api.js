@@ -1,0 +1,1 @@
+export const SpaceXDetails = `https://api.spacexdata.com/v4/company`
