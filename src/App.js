@@ -8,6 +8,7 @@ import PastLaunches from './Pages/Launches/PastLaunches'
 import LatestLaunches from './Pages/Launches/LatestLaunches'
 import LaunchDetails from './Pages/LaunchDetailsPage'
 import Astronauts from './Pages/Astronauts'
+import Rockets from './Pages/Rockets'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/launches/latest' element={<LatestLaunches />} />
           <Route path='/launch/:id' element={<LaunchDetails />} />
           <Route path='/astronauts' element={<Astronauts />} />
+          <Route path='/rockets' element={<Rockets />} />
         </Routes>
       </div>
     </>
