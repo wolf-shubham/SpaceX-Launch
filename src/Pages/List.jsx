@@ -48,6 +48,7 @@ const List = () => {
 
     useEffect(() => {
         fetchData()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pagenum])
     return (
         <>
