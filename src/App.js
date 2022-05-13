@@ -6,6 +6,7 @@ import './index.css'
 import UpcomingLaunches from './Pages/Launches/UpcomingLaunches'
 import PastLaunches from './Pages/Launches/PastLaunches'
 import LatestLaunches from './Pages/Launches/LatestLaunches'
+import LaunchDetails from './Pages/LaunchDetails'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/launches/upcoming' element={<UpcomingLaunches />} />
           <Route path='/launches/past' element={<PastLaunches />} />
           <Route path='/launches/latest' element={<LatestLaunches />} />
+          <Route path='/launch/:id' element={<LaunchDetails />} />
         </Routes>
       </div>
     </>
