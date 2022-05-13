@@ -1,7 +1,11 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import Buttons from '../Components/Buttons'
+import CompanyDetails from '../Components/CompanyDetails'
 import Header from '../Components/Header/Header'
 import { SpaceXDetails } from '../Config/api'
+import rocpic from '../Images/rocl.png'
+import './Pages.css'
 
 const Home = () => {
 
@@ -18,14 +22,14 @@ const Home = () => {
     return (
         <>
             <Header />
-            <div style={{ color: 'white' }}>
-                <h1>{companyData?.name}</h1>
-                <h2>{companyData?.founder}</h2>
-                <h3>{companyData?.founded}</h3>
-                <h3>{companyData?.headquarters.address}</h3>
-                <h3>{companyData?.summary}</h3>
-                <h3>{companyData?.launch_sites}</h3>
-                <h3>{companyData?.valuation}</h3>
+            <div className='homeDiv'>
+                <div>
+                    <img src={rocpic} alt='pic' style={{ height: '87.5vh' }} />
+                </div>
+                <div className='homecontainer'>
+                    <CompanyDetails companyData={companyData} />
+                    <Buttons companyData={companyData} />
+                </div>
             </div>
 
         </>

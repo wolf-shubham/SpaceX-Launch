@@ -5,9 +5,16 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none;
+}
 
+*::-webkit-scrollbar {
+  display: none;
+}
 
-  /* height: 100vh; */
+a,
+Link {
+  text-decoration: none;
 }
 
 .appContainer {

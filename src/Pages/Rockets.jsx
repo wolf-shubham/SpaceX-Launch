@@ -3,6 +3,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Header from '../Components/Header/Header'
 import RocketsCard from '../Components/RocketsCard'
+import './Pages.css'
 
 const Rockets = () => {
     const [newData, setNewData] = useState([])
