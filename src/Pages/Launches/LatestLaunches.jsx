@@ -29,18 +29,11 @@ const LatestLaunches = () => {
                     overflow: 'scroll',
                 }}>
                     <Grid container rowSpacing={2} columnSpacing={2}>
-                        {
-                            newData && newData?.map((element, index) => {
-                                return (
-                                    <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
-                                        <div key={index}>
-                                            <LaunchCard element={element} index={index} />
-                                        </div>
-                                    </Grid>
-                                )
-                            }
-                            )
-                        }
+                        <Grid item xs={12} sm={6} md={4} lg={3}  >
+                            <div >
+                                <LaunchCard element={newData} index={0} />
+                            </div>
+                        </Grid>
                     </Grid>
                 </div>
             </div>
