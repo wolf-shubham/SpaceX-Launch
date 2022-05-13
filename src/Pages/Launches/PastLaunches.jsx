@@ -37,7 +37,6 @@ const PastLaunches = () => {
         // console.log('clientHeight', clientHeight)
         if (scrollTop + clientHeight >= scrollHeight) {
             const data1 = await past.slice(pagenum, pagenum + 10)
-            console.log(data1)
             setNewData(prevData => [...prevData, ...data1])
             setPagenum(pagenum + 10)
         }
