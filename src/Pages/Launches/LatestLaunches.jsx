@@ -3,6 +3,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Header from '../../Components/Header/Header'
 import LaunchCard from '../../Components/LaunchCard'
+import './Launches.css'
 
 const LatestLaunches = () => {
     const [newData, setNewData] = useState([])
@@ -21,21 +22,15 @@ const LatestLaunches = () => {
     return (
         <>
             <Header />
-            <div style={{ color: 'white' }}>
-                <h1>latest launches</h1>
-                <div style={{
-                    width: '100%',
-                    height: '400px',
-                    overflow: 'scroll',
-                }}>
-                    <Grid container rowSpacing={2} columnSpacing={2}>
-                        <Grid item xs={12} sm={6} md={4} lg={3}  >
-                            <div >
-                                <LaunchCard element={newData} index={0} />
-                            </div>
-                        </Grid>
+            <h1>latest launches</h1>
+            <div className='launchDiv'>
+                <Grid container rowSpacing={2} columnSpacing={2}>
+                    <Grid item xs={12} sm={6} md={4} lg={3}  >
+                        <div >
+                            <LaunchCard element={newData} index={0} />
+                        </div>
                     </Grid>
-                </div>
+                </Grid>
             </div>
         </>
     )

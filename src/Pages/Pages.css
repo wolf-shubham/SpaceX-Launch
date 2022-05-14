@@ -5,13 +5,11 @@
 }
 
 .homecontainer {
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    margin-left: 4rem;
 }
 
 .rocket_div {
@@ -24,8 +22,7 @@
 
 @media screen and (max-width: 768px) {
     .homecontainer {
-        width: 90%;
-        padding: 1rem;
+        width: 100%;
     }
 
     .homeDiv {

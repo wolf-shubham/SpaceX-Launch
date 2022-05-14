@@ -1,0 +1,12 @@
+.launchDiv {
+    color: white;
+    overflow-y: scroll;
+    height: 76vh;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .launchDiv {
+        height: 57vh;
+    }
+}

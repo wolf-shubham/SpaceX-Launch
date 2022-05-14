@@ -3,6 +3,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Header from '../../Components/Header/Header'
 import LaunchCard from '../../Components/LaunchCard'
+import './Launches.css'
 
 const UpcomingLaunches = () => {
     const [past, setPast] = useState([])
@@ -36,28 +37,22 @@ const UpcomingLaunches = () => {
     return (
         <>
             <Header />
-            <div style={{ color: 'white' }}>
-                <h1>Upcoming Launches</h1>
-                <div onScroll={handleScroll} style={{
-                    width: '100%',
-                    height: '400px',
-                    overflow: 'scroll',
-                }}>
-                    <Grid container rowSpacing={2} columnSpacing={2}>
-                        {
-                            newData && newData.map((element, index) => {
-                                return (
-                                    <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
-                                        <div key={index}>
-                                            <LaunchCard element={element} index={index} />
-                                        </div>
-                                    </Grid>
-                                )
-                            }
+            <h1>Upcoming Launches</h1>
+            <div onScroll={handleScroll} className='launchDiv'>
+                <Grid container rowSpacing={3} columnSpacing={2}>
+                    {
+                        newData && newData.map((element, index) => {
+                            return (
+                                <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
+                                    <div key={index}>
+                                        <LaunchCard element={element} index={index} />
+                                    </div>
+                                </Grid>
                             )
                         }
-                    </Grid>
-                </div>
+                        )
+                    }
+                </Grid>
             </div>
         </>
     )
