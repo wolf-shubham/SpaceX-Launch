@@ -1,7 +1,9 @@
 import { Grid } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import AstronautCard from '../Components/AstronautCard'
 import Header from '../Components/Header/Header'
+import './Pages.css'
 
 const Astronauts = () => {
     const [past, setPast] = useState([])
@@ -36,28 +38,13 @@ const Astronauts = () => {
         <>
             <Header />
             <div style={{ color: 'white' }}>
-                <h1>Upcoming Launches</h1>
-                <div onScroll={handleScroll} style={{
-                    width: '100%',
-                    height: '400px',
-                    overflow: 'scroll',
-                }}>
+                <div className='rocket_div' onScroll={handleScroll}>
                     <Grid container rowSpacing={2} columnSpacing={2}>
                         {
                             newData && newData.map((element, index) => {
                                 return (
                                     <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
-                                        <div key={index}>
-                                            {/* <LaunchCard element={element} index={index} /> */}
-                                            <h2>{element.name}</h2>
-                                            <img src={element.image} alt={element.name} style={{
-                                                width: '200px',
-                                                height: '200px',
-                                                borderRadius: '50%',
-                                            }} />
-                                            <h3>{element.agency}</h3>
-                                            <h3>Status : {element.status}</h3>
-                                        </div>
+                                        <AstronautCard element={element} />
                                     </Grid>
                                 )
                             }

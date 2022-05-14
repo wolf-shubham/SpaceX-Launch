@@ -22,12 +22,8 @@ const Rockets = () => {
         <>
             <Header />
             <div style={{ color: 'white' }}>
-                <h1>Rockets</h1>
-                <div style={{
-                    width: '100%',
-                    height: '400px',
-                    overflow: 'scroll',
-                }}>
+                {/* <h1>Rockets</h1> */}
+                <div className='rocket_div'>
                     <Grid container rowSpacing={2} columnSpacing={2}>
                         {
                             newData && newData.map((element, index) => {
