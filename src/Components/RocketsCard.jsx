@@ -1,15 +1,17 @@
 import React from 'react'
 import moment from 'moment'
+import './Components.css'
 
 const RocketsCard = ({ element }) => {
     const { flickr_images } = element
     return (
         <>
-            <div style={{ marginTop: '1rem' }}>
+            <div className='rocketCardDiv'>
                 <h2>{element.name}</h2>
                 <img src={flickr_images[0]} alt={element.name} style={{
                     width: '300px',
                     height: '200px',
+                    margin: '10px 0'
                 }} />
                 <h3>{element.agency}</h3>
                 <h3>{element.description}</h3>

@@ -19,9 +19,9 @@ const LaunchCard = ({ index, element }) => {
                 <h3>Launch Date : {date_utc ? moment(element.date_utc).format("DD/MM/YYYY") : 'Date Not Found'}</h3>
                 <Link to={`/launch/${element.id}`}>
                     <Button
-                        variant="contained"
-                    // fullWidth
-                    >Details</Button>
+                        variant="outlined"
+                        style={{ marginTop: '10px', fontWeight: '790', letterSpacing: '1px', color: 'goldenrod' }}
+                    >launch details</Button>
                 </Link>
             </div>
         </>
