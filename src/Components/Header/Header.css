@@ -17,6 +17,18 @@
     align-items: center;
 }
 
+.navLinks select {
+    /* appearance: none; */
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+#cars option {
+    color: black;
+    font-size: 1.5rem;
+}
+
 .links {
     color: white;
     font-size: 1.5rem;

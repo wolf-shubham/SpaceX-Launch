@@ -37,8 +37,8 @@ const UpcomingLaunches = () => {
     return (
         <>
             <Header />
-            <h1>Upcoming Launches</h1>
             <div onScroll={handleScroll} className='launchDiv'>
+                <h1>Upcoming Launches</h1>
                 <Grid container rowSpacing={3} columnSpacing={2}>
                     {
                         newData && newData.map((element, index) => {

@@ -51,8 +51,8 @@ const PastLaunches = () => {
     return (
         <>
             <Header />
-            <h1>Past Launches</h1>
             <div onScroll={handleScroll} className='launchDiv'>
+                <h1>Past Launches</h1>
                 <Grid container rowSpacing={2} columnSpacing={2}>
                     {
                         newData && newData.map((element, index) => {

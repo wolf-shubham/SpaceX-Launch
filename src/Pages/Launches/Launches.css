@@ -1,8 +1,14 @@
 .launchDiv {
     color: white;
     overflow-y: scroll;
-    height: 76vh;
+    height: 83vh;
     padding: 1rem;
+    text-align: center;
+}
+
+.launchDiv h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {
