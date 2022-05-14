@@ -21,7 +21,7 @@ const LaunchData = ({ launch, payloadData, links, details, success, rocketDetail
                     : <h2 style={{ color: `${success === true ? 'green' : 'red'}` }}>{success ? 'Success' : 'Failure'}</h2>
             }
             <h3>Rocket : {rocketDetails.name}</h3>
-            <h3>{date_utc ? moment(date_utc).format("DD/MM/YYYY") : 'Date Not Found'}</h3>
+            <h3>Launch Date : {date_utc ? moment(date_utc).format("DD/MM/YYYY") : 'Date Not Found'}</h3>
         </div>
     )
 }

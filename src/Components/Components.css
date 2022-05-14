@@ -20,6 +20,14 @@
     width: 50%;
 }
 
+.videoConatainerButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    margin-top: 2rem;
+}
+
 .launchDataDiv {
     display: flex;
     justify-content: center;
@@ -45,5 +53,11 @@
 
     .launchDataDiv {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .launchDataDiv {
+        margin-top: 5rem;
     }
 }

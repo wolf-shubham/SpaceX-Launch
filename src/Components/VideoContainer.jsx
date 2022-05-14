@@ -9,8 +9,19 @@ const VideoContainer = ({ links, launch }) => {
             {
                 links && links.youtube_id ? <iframe width="560" height="315" src={`https://www.youtube.com/embed/${links.youtube_id}`} frameBorder="0" title={launch.name}></iframe> : <h2>Video Not Available</h2>
             }
-            <Button variant='outlined'>Article</Button>
-            <Button variant='contained'>Wikipedia</Button>
+            <div className='videoConatainerButtons'>
+                {
+                    links && links.article === null ? null : <Button variant="outlined" onClick={() => links.article ? window.open(links.article, '_blank') : null}>
+                        Article
+                    </Button>
+                }
+                {
+                    links && links.wikipedia === null ? null : <Button variant="outlined" onClick={() => links.wikipedia ? window.open(links.wikipedia, '_blank') : null}>
+                        Wikipedia
+                    </Button>
+                }
+            </div>
+
         </div>
     )
 }
