@@ -1,0 +1,49 @@
+.launchDetailsDiv {
+    height: 87vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 3rem; */
+    align-items: center;
+}
+
+.videoContainerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.launchDataDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+}
+
+.launchDataDiv h2 {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .launchDetailsDiv {
+        height: 68vh;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .videoContainerDiv {
+        width: 100%;
+    }
+
+    .launchDataDiv {
+        width: 100%;
+    }
+}

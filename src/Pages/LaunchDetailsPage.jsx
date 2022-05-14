@@ -23,7 +23,6 @@ const LaunchDetailsPage = () => {
         <>
             <Header />
             <div style={{ color: 'white' }}>
-                <h1>LaunchDetails</h1>
                 {launch && <LaunchDetails launch={launch} />}
             </div>
         </>

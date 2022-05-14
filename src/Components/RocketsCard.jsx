@@ -5,7 +5,7 @@ const RocketsCard = ({ element }) => {
     const { flickr_images } = element
     return (
         <>
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1rem' }}>
                 <h2>{element.name}</h2>
                 <img src={flickr_images[0]} alt={element.name} style={{
                     width: '300px',

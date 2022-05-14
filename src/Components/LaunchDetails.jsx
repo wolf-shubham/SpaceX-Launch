@@ -1,7 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import moment from 'moment'
-import { Button } from '@mui/material'
+import './Components.css'
+import VideoContainer from './VideoContainer'
+import LaunchData from './LaunchData'
+import './Components.css'
 
 const LaunchDetails = ({ launch }) => {
     // console.log("", launch.links?.webcast)
@@ -28,20 +30,9 @@ const LaunchDetails = ({ launch }) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [rocket, payloadid])
     return (
-        <div>
-            <h2>{launch.name}</h2>
-            <h3>Payload : {payloadData.name}</h3>
-            <h3>Payload Orbit : {payloadData.regime}</h3>
-            <h2>{launch?.flight_number}</h2>
-            <img src={links?.patch.small} alt="" />
-            <h3>{details ? details : 'Launch Details Not Available.'}</h3>
-            <h3>success : {success ? 'true' : 'false'}</h3>
-            <h3>rocket id : {launch.rocket}</h3>
-            <h3>{rocketDetails.name}</h3>
-            <h3>{date_utc ? moment(date_utc).format("DD/MM/YYYY") : 'Date Not Found'}</h3>
-            <iframe src={`https://www.youtube.com/embed/${links?.youtube_id}`} frameBorder='0' title={launch.name}></iframe><br />
-            <Button variant='contained'>Article</Button>
-            <Button variant='contained'>Wikipedia</Button>
+        <div className='launchDetailsDiv'>
+            <LaunchData launch={launch} payloadData={payloadData} links={links} details={details} success={success} rocketDetails={rocketDetails} date_utc={date_utc} />
+            <VideoContainer links={links} launch={launch} />
         </div>
     )
 }
