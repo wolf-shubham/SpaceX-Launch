@@ -2,7 +2,7 @@
 Step 1 : Go to the desired directory on your system where you want to clone project. Open command prompt cmd.exe .\
 Step 2 : Paste this link : git clone https://github.com/wolf-shubham/SpaceX-Launch.git .\
 Step 3 : Navigate to folder where project is to be cloned via. command prompt. Run Command : npm install (to install node dependencies). .\
-Step 4 : Run project using : npm start .\
+Step 4 : Run project using : npm start .
 
 # Getting Started with Create React App
 
